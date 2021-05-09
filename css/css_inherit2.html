@@ -1,0 +1,40 @@
+<!--우선 순위
+inline>internal>external
+
+동일하면 나중의 것이 적용
+span{
+    color:red;
+}
+span{
+    color:blue;
+}
+=>blue 적용
+
+구체적으로 표현된 것을 우선
+body>span{
+    color:red;
+}
+span{
+    color:blue;
+}
+=>red 적용
+
+
+id>class>element 순
+<div id="a" class="b">
+    text...
+</div>
+
+#a{
+    color:red;
+}
+.b{
+    color:blue;
+}
+div{
+    color:green;
+}
+=>red 적용
+
+css specificity!!
+-->
