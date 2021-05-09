@@ -1,0 +1,102 @@
+<!--
+    CSS selector
+    : HTML의 요소를 tag, id, class, html 태그 속성 등을 통해 쉽게 찾아주는 방법
+
+    element에 style을 지정하기 위해서, 3가지 기본 선택자를 사용할 수 있음
+    tag, id, class
+-->
+
+<!--tag-->
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tag!</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <span>HELLO World!</span>
+  </body>
+</html>
+-->
+
+<!--id-->
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>id!!</title>
+    <style>
+      #spantag {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="spantag">HELLO World!</span>
+  </body>
+</html>
+-->
+
+<!--class-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .spanClass {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="spanClass">HELLO World!</span>
+  </body>
+</html>
+
+<!--
+    id, class 요소 선택자와 함께 활용
+    #myid {color:red}
+    div.myclassname{color:red}
+
+    그룹 선택
+    hi, span, div{color: red}
+    hi, span, div#id {color: red}
+    hi.span, div.classname {color: red}
+
+    하위 요소 선택(공백)
+    #jisu span {color: red}
+
+    <div id="jisu">
+        <div>
+            <span>span tag</span>
+        </div>
+        <span>span tag2</span>
+    </div>
+
+    자식 선택(>)
+    #fisu>span{color:red}
+    <div id="jisu">
+        <div>
+            <span>span tag</span>
+        </div>
+        <span>span tag2</span>
+    </div>
+
+    n번째 자식요소를 선택(nth-child)
+     #jisu > p:nth-child(3) {
+        color: red;
+      }
+      <div id="jisu">
+      <h2>단락 선택</h2>
+      <p>첫번째 단락입니다</p>
+      <p>두번째 단락입니다</p>
+      <p>세번째 단락입니다</p>
+      <p>네번째 단락입니다</p>
+    </div>
+-->
