@@ -1,0 +1,32 @@
+/*
+하나의 블록엘리먼트는 box 형태임(box-model)
+블록엘리먼트의 경우 box의 크기와 간격에 관한 속성으로 배치를 추가 결정한다
+margin, padding border, outline으로 생성됨
+box-shadow 속성도 box-model에 포함지어 설명할 수 있다
+box-shadow는 border밖에 테두리를 그릴 수 있는 속성이다
+
+엘리먼트의 크기는 부모의 크기가 기본
+block엘리먼트의 크기는 기본적으로 부모의 크기만큼 가니다
+예를 들어 width:100%는 부모의 크기만큼을 다 갖는 것과 같다
+
+box-sizing과 padding
+padding 속성을 늘리면 엘리먼트의 크기가 달라질 수 있다
+box-sizing 속성으로 이를 컨트롤 할 수 있다. box-sizing 속성을 border-box로 설정하면 엘리먼트의 크기를 고정하면서 padding 값만 늘릴 수 있다
+
+*/
+
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  padding: 50px;
+  font-size: 0.8em;
+}
+
+.box-content {
+  box-sizing: content-box;
+}
+
+.box-border {
+  box-sizing: border-box;
+}
