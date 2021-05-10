@@ -1,0 +1,47 @@
+/*
+position 속성
+을 사용하면 상대적/절대적으로 어떤 위치에 엘리먼트를 배치하는 것이 수월하다
+1. 특별한 배치 할 수 있다(기본 static, 그냥 순서대로 배치됨)
+2. absolute: 기준점에 따라서 특별한 위치에 위치함
+    top/left/right/bottom으로 설정
+    기준점을 상위엘리먼트로 단계적으로 찾아가는데 static이 아닌 position이 기준점
+3. relative: 원래 자신이 위치해야 할 곳을 기준으로 이동
+    top/left/right/bottom으로 설정
+4. fixed: viewport(전체화면)좌측, 맨위를 기준으로 동작함
+
+
+margin: 간격을 다르게해서 배치하기
+margin은 위/아래/좌/우 엘리먼트와 본인간의 간격이다. 따라서 그 간격만큼 내 위치가 달라짐
+*/
+.wrap {
+  position: relative; /*relative는 여기가 기준점*/
+}
+.wrap > div {
+  width: 150px;
+  height: 100px;
+  border: 1px solid gray;
+  font-size: 0.7em;
+  text-align: center;
+  line-height: 100px;
+}
+
+.relative {
+  position: relative;
+  left: 10px;
+}
+.absolute {
+  position: absolute;
+  left: 130px;
+  top: 30px;
+}
+.fixed {
+  position: fixed;
+  top: 250px;
+}
+* {
+  border: 1px solid gray;
+}
+.bottom {
+  margin-top: 120px;
+  margin-left: 100px;
+}
