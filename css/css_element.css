@@ -1,0 +1,9 @@
+/*display: block, inline*/
+div,
+p {
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+  /*display: inline;*/ /*가로로 배열*/
+  display: block;
+}
