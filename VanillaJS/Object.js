@@ -19,3 +19,5 @@ ryulaInfo.age = 20;
 console.log(ryulaInfo.age);
 console.log(ryulaInfo.favFood);
 console.log(ryulaInfo.favFood[0].name);
+
+console.log(console);
