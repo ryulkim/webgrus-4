@@ -18,4 +18,4 @@ title.style.color = "red";
 
 const aaa = document.querySelector("#title"); //노드의 첫번쨰 자식을 반환
 title.innerHTML = "HI";
-title.style.color = "red";
+title.style.color = "green";
