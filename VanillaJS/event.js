@@ -21,7 +21,19 @@ function handleClick() {
 
 function init() {
   title.style.color = BASE_COLOR;
-  title.addEventListener("click", handleClick);
+  title.addEventListener("mouseenter", handleClick);
 }
 
 init();
+
+function handleOnline() {
+  console.log("Welcome");
+}
+function handleOffline() {
+  console.log("byebye");
+}
+
+//MDN(html javascript dom event mdn) 보기!!: 이벤트 볼 수 있음
+
+window.addEventListener("offline", handleOffline);
+window.addEventListener("online", handleOnline);
