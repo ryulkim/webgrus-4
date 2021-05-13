@@ -1,5 +1,8 @@
 const title = document.querySelector("#title");
 
+const BASE_COLOR = "rgb(0, 247, 255)";
+const OTHER_COLOR = "#f9ca24";
+
 function handleResize(event) {
   console.log("I have been resized");
   console.log(event);
@@ -8,7 +11,17 @@ function handleResize(event) {
 window.addEventListener("resize", handleResize); //handleResize() ()를 쓰게 되면 그냥 함수가 호출되니까 ()를 쓰면 안된다.
 
 function handleClick() {
-  title.style.color = "red";
+  const currentColor = title.style.color;
+  if (currentColor === BASE_COLOR) {
+    title.style.color = OTHER_COLOR;
+  } else {
+    title.style.color = BASE_COLOR;
+  }
 }
 
-title.addEventListener("click", handleClick);
+function init() {
+  title.style.color = BASE_COLOR;
+  title.addEventListener("click", handleClick);
+}
+
+init();
