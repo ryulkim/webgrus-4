@@ -5,11 +5,12 @@ const BASE_COLOR = "rgb(0, 247, 255)";
 const OTHER_COLOR = "#f9ca24";
 
 function handleClick() {
-  const currentClass = title.className;
-  if (currentClass !== CLICKED_CLASS) {
-    title.className = CLICKED_CLASS;
+  const hasClass = title.classList.contains(CLICKED_CLASS);
+
+  if (hasClass) {
+    title.classList.remove(CLICKED_CLASS);
   } else {
-    title.className = "btn";
+    title.classList.add(CLICKED_CLASS);
   }
 }
 
