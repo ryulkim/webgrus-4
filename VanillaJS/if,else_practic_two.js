@@ -9,7 +9,7 @@ function handleClick() {
   if (currentClass !== CLICKED_CLASS) {
     title.className = CLICKED_CLASS;
   } else {
-    title.className = "";
+    title.className = "btn";
   }
 }
 

@@ -10,3 +10,7 @@ h1 {
 .clicked {
   color: plum;
 }
+
+.btn {
+  cursor: pointer;
+}
