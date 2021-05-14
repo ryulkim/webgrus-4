@@ -5,13 +5,7 @@ const BASE_COLOR = "rgb(0, 247, 255)";
 const OTHER_COLOR = "#f9ca24";
 
 function handleClick() {
-  const hasClass = title.classList.contains(CLICKED_CLASS);
-
-  if (hasClass) {
-    title.classList.remove(CLICKED_CLASS);
-  } else {
-    title.classList.add(CLICKED_CLASS);
-  }
+  title.classList.toggle(CLICKED_CLASS); //toggle로 아까 했던 contain 작업 반복 super simple~!
 }
 
 function init() {
