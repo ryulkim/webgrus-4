@@ -1,0 +1,12 @@
+.clicked {
+  color: gray;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
