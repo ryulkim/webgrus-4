@@ -1,14 +1,36 @@
 .btn {
   cursor: pointer;
 }
-
 body {
-  color: gray;
+  position: relative;
   background-color: #535c68;
+  width: 100%;
+  height: 100%;
+}
+.body {
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 30;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .clicked {
   color: gray;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .form,
@@ -29,12 +51,17 @@ body {
   }
 }
 
-.bgImage {
+script .bgImage {
   position: absolute;
+  display: inline-block;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
 }
