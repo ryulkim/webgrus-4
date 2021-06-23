@@ -65,3 +65,9 @@ script .bgImage {
 ul {
   list-style: none;
 }
+
+.js-weather {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
