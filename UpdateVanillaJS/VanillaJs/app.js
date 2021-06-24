@@ -24,7 +24,7 @@ myName = "RyulA";
 console.log("Hello, " + myName);
 
 //boolean
-//0: true, 1: false, null: 아무것도 없음, undefined: 정의 되지 않음
+//0: true, 1: false, null: 아무것도 없음, undefined: 정의 되지 않음 NaN: Not a Number, 숫자가 아님
 //null은 값이 없다는걸 확실하게 표현, 의도적으로 표현
 //undefined는 variable이 존재하는데 값이 할당이 안된것
 const amIFat = false;
@@ -54,3 +54,30 @@ console.log(player["name"]);
 //player = false; //error
 player.lastName = "mash"; //추가됨
 console.log(player);
+
+//function
+function sayHello(nameOfPerson) {
+  console.log("Hello,", nameOfPerson);
+}
+
+sayHello("Ryula");
+sayHello("aaaa");
+
+function plus(a, b) {
+  console.log(a + b);
+}
+function divide(a, b) {
+  console.log(a / b);
+}
+plus(4, 5);
+divide(9, 2);
+
+const Player = {
+  name: "nico",
+  sayHello: function (otherPersonsName) {
+    console.log(this.name + ":", "hello!", otherPersonsName);
+  },
+};
+
+console.log(Player.name);
+Player.sayHello("Ryula");
