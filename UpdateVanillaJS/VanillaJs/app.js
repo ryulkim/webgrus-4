@@ -40,3 +40,17 @@ console.log(nonsense[2]);
 //Add one more day to the array
 nonsense.push("ddddd");
 console.log(nonsense);
+
+//object
+const player = {
+  name: "nico",
+  points: 10,
+  fat: true,
+};
+console.log(player);
+console.log(player.name);
+player.name = "ryula";
+console.log(player["name"]);
+//player = false; //error
+player.lastName = "mash"; //추가됨
+console.log(player);
