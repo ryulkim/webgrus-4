@@ -11,11 +11,14 @@ console.log(5 / 2);
 //파이썬 방식: 공백을 _로 함, ex) my_name
 const a = 7;
 const b = 2;
-const myName = "ryula";
+let myName = "ryula";
 
 console.log(a + b);
 console.log(a * b);
 console.log(a / b);
 
 console.log("Hello,", myName);
+console.log("Hello, " + myName);
+
+myName = "RyulA";
 console.log("Hello, " + myName);
