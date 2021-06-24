@@ -22,3 +22,10 @@ console.log("Hello, " + myName);
 
 myName = "RyulA";
 console.log("Hello, " + myName);
+
+//boolean
+//0: true, 1: false, null: 아무것도 없음
+const amIFat = false;
+let somthing;
+console.log(amIFat);
+console.log(somthing);
