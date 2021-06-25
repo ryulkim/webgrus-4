@@ -134,3 +134,6 @@ if (isNaN(age) || age < 0) {
 } else {
   console.log("Hmm....You should consider your health");
 }
+
+//document
+document.title = "Hello! From Js!";
