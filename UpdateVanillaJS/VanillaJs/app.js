@@ -85,20 +85,34 @@ Player.sayHello("Ryula");
 //HW
 const calculator = {
   add: function (a, b) {
-    console.log(a + b);
+    return a + b;
   },
   minus: function (a, b) {
-    console.log(a - b);
+    return a - b;
   },
   divide: function (a, b) {
-    console.log(a / b);
+    return a / b;
   },
   power: function (a, b) {
-    console.log(a ** b);
+    return a ** b;
   },
 };
 
-calculator.add(1, 2);
-calculator.minus(1, 2);
-calculator.divide(1, 2);
-calculator.power(1, 2);
+const pluseResult = calculator.add(1, 2);
+const minusResult = calculator.minus(1, pluseResult);
+const divideResult = calculator.divide(minusResult, 2);
+const powerResult = calculator.power(divideResult, 2);
+
+console.log(pluseResult);
+console.log(minusResult);
+console.log(divideResult);
+console.log(powerResult);
+
+const age = 96;
+function calculatorKrAge(ageOfForeigner) {
+  return ageOfForeigner + 2;
+}
+
+const KrAge = calculatorKrAge(age);
+
+console.log(KrAge);
