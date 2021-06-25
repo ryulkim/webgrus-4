@@ -119,6 +119,14 @@ console.log(KrAge);
 
 //prompt: 사용자에게 창을 띄울 수 있도록 함, 오래된 방법, 보동 브라우저가 지원하는 창을 씀, type은 string으로
 //parseInt: 타입을 int로 바꿔주는 법
-const prom = parseInt(prompt("How old are you?"));
+let prom = parseInt(prompt("How old are you?"));
 console.log(prom);
 console.log(typeof prom); //typeof: 타입을 알려줌
+console.log(isNaN(prom)); //isNaN: 숫자가 아니면 true, 숫자면 false
+
+if (isNaN(prom)) {
+  console.log("Please write a number");
+  prom = parseInt(prompt("How old are you?"));
+} else {
+  console.log("your age is", prom);
+}
