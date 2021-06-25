@@ -108,7 +108,7 @@ console.log(minusResult);
 console.log(divideResult);
 console.log(powerResult);
 
-const age = 96;
+let age = 96;
 function calculatorKrAge(ageOfForeigner) {
   return ageOfForeigner + 2;
 }
@@ -119,14 +119,18 @@ console.log(KrAge);
 
 //prompt: 사용자에게 창을 띄울 수 있도록 함, 오래된 방법, 보동 브라우저가 지원하는 창을 씀, type은 string으로
 //parseInt: 타입을 int로 바꿔주는 법
-let prom = parseInt(prompt("How old are you?"));
-console.log(prom);
-console.log(typeof prom); //typeof: 타입을 알려줌
-console.log(isNaN(prom)); //isNaN: 숫자가 아니면 true, 숫자면 false
+age = parseInt(prompt("How old are you?"));
+console.log(age);
+console.log(typeof age); //typeof: 타입을 알려줌
+console.log(isNaN(age)); //isNaN: 숫자가 아니면 true, 숫자면 false
 
-if (isNaN(prom)) {
+if (isNaN(age)) {
   console.log("Please write a number");
   prom = parseInt(prompt("How old are you?"));
+} else if (age < 18) {
+  console.log("You are too young");
+} else if (age < 45) {
+  console.log("You can drink");
 } else {
-  console.log("your age is", prom);
+  console.log("Hmm....You should consider your health");
 }
