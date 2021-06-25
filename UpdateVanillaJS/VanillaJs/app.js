@@ -124,8 +124,8 @@ console.log(age);
 console.log(typeof age); //typeof: 타입을 알려줌
 console.log(isNaN(age)); //isNaN: 숫자가 아니면 true, 숫자면 false
 
-if (isNaN(age)) {
-  console.log("Please write a number");
+if (isNaN(age) || age < 0) {
+  console.log("Please write a real positive number");
   prom = parseInt(prompt("How old are you?"));
 } else if (age < 18) {
   console.log("You are too young");
