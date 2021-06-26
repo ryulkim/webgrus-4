@@ -51,6 +51,6 @@ function mouseLeave() {
   query.style.color = "blue";
 }
 
-query.addEventListener("click", handleClick);
-query.addEventListener("mouseenter", mouseEnter);
+query.addEventListener("click", handleClick); //=query.onclick=handleClick;
+query.addEventListener("mouseenter", mouseEnter); //=query.onmouseenter=mouseEnter;
 query.addEventListener("mouseleave", mouseLeave);
