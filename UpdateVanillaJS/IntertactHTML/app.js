@@ -50,7 +50,17 @@ function mouseEnter() {
 function mouseLeave() {
   query.style.color = "blue";
 }
+function handleWindowResize() {
+  document.body.style.backgroundColor = "tomato";
+}
+function handleWindowCopy() {
+  alert("copier!");
+}
 
 query.addEventListener("click", handleClick); //=query.onclick=handleClick;
 query.addEventListener("mouseenter", mouseEnter); //=query.onmouseenter=mouseEnter;
 query.addEventListener("mouseleave", mouseLeave);
+
+//window
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
