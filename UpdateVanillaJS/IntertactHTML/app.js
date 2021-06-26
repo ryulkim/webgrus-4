@@ -41,7 +41,14 @@ console.dir(queryAll);
 
 //Event, h1 html element mdn 검색
 function handleClick() {
-  query.style.color = "green";
+  const currentColor = queryAll[1].style.color;
+  let newColor;
+  if (currentColor === "green") {
+    newColor = "tomato";
+  } else {
+    newColor = "green";
+  }
+  queryAll[1].style.color = newColor;
 }
 function mouseEnter() {
   query.style.color = "red";
@@ -57,7 +64,7 @@ function handleWindowCopy() {
   alert("copier!");
 }
 
-query.addEventListener("click", handleClick); //=query.onclick=handleClick;
+queryAll[1].addEventListener("click", handleClick); //=query.onclick=handleClick;
 query.addEventListener("mouseenter", mouseEnter); //=query.onmouseenter=mouseEnter;
 query.addEventListener("mouseleave", mouseLeave);
 
