@@ -18,13 +18,13 @@ className[0].innerText = "1231231";
 //querySelector: css 방식으로 검색
 let query = document.querySelector(".hello h1"); //첫번째 것만 가져온다
 console.log(query);
-query = document.querySelector(".hello h1:first-child");
+query = document.querySelector("div.hello h1:first-child");
 console.log(query);
-query = document.querySelector(".hello h1:nth-child(2)");
+query = document.querySelector("div.hello h1:nth-child(2)");
 console.log(query);
-query = document.querySelector(".hello h1:nth-child(3)");
+query = document.querySelector("div.hello h1:nth-child(3)");
 console.log(query);
-query = document.querySelector(".hello h1:last-child");
+query = document.querySelector("div.hello h1:last-child");
 console.log(query);
 query.innerText = 33333333333333;
 
@@ -32,3 +32,25 @@ query.innerText = 33333333333333;
 const queryAll = document.querySelectorAll(".hello h1");
 console.log(queryAll);
 queryAll[1].innerText = 125678940;
+
+console.dir(query);
+query.style.color = "blue";
+
+console.dir(queryAll[1]);
+console.dir(queryAll);
+
+//Event, h1 html element mdn 검색
+function handleClick() {
+  query.style.color = "green";
+}
+function mouseEnter() {
+  query.style.color = "red";
+  console.log("mooooooooooooooooooouseeeeeeeeeee");
+}
+function mouseLeave() {
+  query.style.color = "blue";
+}
+
+query.addEventListener("click", handleClick);
+query.addEventListener("mouseenter", mouseEnter);
+query.addEventListener("mouseleave", mouseLeave);
