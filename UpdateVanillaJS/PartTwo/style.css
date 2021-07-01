@@ -9,3 +9,7 @@ h1 {
 .active {
   color: turquoise;
 }
+
+.sexy-font {
+  font-family: cursive;
+}
