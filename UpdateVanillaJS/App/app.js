@@ -4,14 +4,28 @@ const loginButton = loginForm.querySelector("button");
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
   event.preventDefault(); //기본 동작을 하지 못하도록 함=>페이지 새로고침을 막음
   const username = loginInput.value;
-  localStorage.setItem("username", username);
+  localStorage.setItem(USERNAME_KEY, username);
   loginForm.classList.add(HIDDEN_CLASSNAME);
   console.log(username);
+  paintGreetings(username);
+}
+
+function paintGreetings(username) {
   greeting.innerText = `hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-loginForm.addEventListener("submit", onLoginSubmit);
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  paintGreetings(savedUsername);
+}
