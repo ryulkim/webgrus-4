@@ -8,6 +8,7 @@ const HIDDEN_CLASSNAME = "hidden";
 function onLoginSubmit(event) {
   event.preventDefault(); //기본 동작을 하지 못하도록 함=>페이지 새로고침을 막음
   const username = loginInput.value;
+  localStorage.setItem("username", username);
   loginForm.classList.add(HIDDEN_CLASSNAME);
   console.log(username);
   greeting.innerText = `hello ${username}`;
