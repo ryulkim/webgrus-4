@@ -1,0 +1,11 @@
+/*body태그의 부모인 html도 height을 100%로 적용해줘야 한다.*/
+html, body {
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  
+#button{
+    margin:auto;
+  }
