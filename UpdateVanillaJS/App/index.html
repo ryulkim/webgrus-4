@@ -8,25 +8,35 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <form id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button type="submit">Log In</button>
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+    <div id="center">
+      <form id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          id="login"
+          placeholder="What is your name?"
+        />
+        <label for="name" class="form__label">Name</label>
+        <button type="submit">Log In</button>
+      </form>
+      <h2 id="clock">00:00:00</h2>
+      <h1 id="greeting" class="hidden"></h1>
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          id="todo"
+          required
+        />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
     <div id="quote">
       <span></span>
       <span></span>
     </div>
+
     <div id="weather">
       <span></span>
       <span></span>
