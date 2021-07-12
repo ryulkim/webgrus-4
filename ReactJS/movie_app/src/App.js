@@ -1,40 +1,24 @@
 import React from "react";
+import axios from "axios"; //axios: fetch위에 작은 layer
 
-//state를 사용하기 위해 class component 사용
-//Mount: constructor가 실행되고 그 담에 render가 실행된다. constructor->render->componentDidMount
-//Update: componentDidUpdate: render가 더 실행되면 (업데이트 되면) 발동!
 class App extends React.Component {
-  constructor(props){
-    super(props);
-    console.log("hello");
-  }
   state = {
-    count: 0,
+    isLoading: true,
+    movies: [],
   };
-  add = () => {
-    this.setState(current=>({count:current.count+1}));
+  getMovies = async () => {
+    const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json"); //await: axios 정보를 불러일으킬 때까지 기다린다. await를 쓰려면 외부 async를 써야한다.
   };
-  minus = () => {
-    this.setState(current=>({count:current.count-1}));
-  };
-  componentDidMount(){
-    console.log("component rendered");
-  }
-  componentDidUpdate(){
-    console.log("I just updated!");
-  }
-  componentWillUnmount(){
-    console.log("Good Bye, cruel world!")
+  componentDidMount() {
+    this.getMovies();
+    /*
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 6000);*/
   }
   render() {
-    console.log("I'm rendering.");
-    return (
-      <div>
-        <h1>The number is {this.state.count}</h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    );
+    const { isLoading } = this.state;
+    return <div>{isLoading ? "Loading..." : "We are ready"}</div>;
   }
 }
 
