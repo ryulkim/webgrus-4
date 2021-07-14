@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Movie.css";
 
 function Movie({ id, year, title, summary, poster }) {
   return (
@@ -7,9 +8,7 @@ function Movie({ id, year, title, summary, poster }) {
       <img src={poster} alt={title} title={title} />
       <div class="movie__data">
         <div class="movies__movie">
-          <h3 class="movie__titile" style={{ backgroundColor: "red" }}>
-            {title}
-          </h3>
+          <h3 class="movie__titile">{title}</h3>
           <h5 class="movie__year">{year}</h5>
           <p class="movie__summary">{summary}</p>
         </div>
