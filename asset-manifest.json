@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/webgrus-4/static/css/main.2ec3c7c1.chunk.css",
+    "main.js": "/webgrus-4/static/js/main.0e663e70.chunk.js",
+    "main.js.map": "/webgrus-4/static/js/main.0e663e70.chunk.js.map",
+    "runtime-main.js": "/webgrus-4/static/js/runtime-main.a2a0294c.js",
+    "runtime-main.js.map": "/webgrus-4/static/js/runtime-main.a2a0294c.js.map",
+    "static/js/2.88477602.chunk.js": "/webgrus-4/static/js/2.88477602.chunk.js",
+    "static/js/2.88477602.chunk.js.map": "/webgrus-4/static/js/2.88477602.chunk.js.map",
+    "index.html": "/webgrus-4/index.html",
+    "static/css/main.2ec3c7c1.chunk.css.map": "/webgrus-4/static/css/main.2ec3c7c1.chunk.css.map",
+    "static/js/2.88477602.chunk.js.LICENSE.txt": "/webgrus-4/static/js/2.88477602.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2a0294c.js",
+    "static/js/2.88477602.chunk.js",
+    "static/css/main.2ec3c7c1.chunk.css",
+    "static/js/main.0e663e70.chunk.js"
+  ]
+}
