@@ -6,15 +6,8 @@ import About from "./routes/About";
 function App() {
   return (
     <HashRouter>
-      <Route path="/home">
-        <h1>Home</h1>
-      </Route>
-      <Route path="/home/introduction">
-        <h1>intorduction</h1>
-      </Route>
-      <Route path="/about">
-        <h1>About</h1>
-      </Route>
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/about" component={About} />
     </HashRouter>
   );
 }
