@@ -1,0 +1,23 @@
+a {
+  color: blue;
+  text-decoration: none;
+  margin: auto;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.navi {
+  text-align: center;
+  display: inline-block;
+  background-color: white;
+  padding: 0 1%;
+  padding-top: 0px;
+  padding-right: 1%;
+  padding-bottom: 0px;
+  padding-left: 1%;
+  position: relative;
+  top: 10%;
+  left: 2%;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,9 @@
+html,
+body,
+#root {
+  width: 100%;
+}
+
+#about {
+  text-align: center;
+}

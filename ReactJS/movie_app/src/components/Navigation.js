@@ -1,12 +1,27 @@
 import React from "react";
+import "./Navigation.css";
 import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div>
-      <Link to="/">Home</Link>
+    <div className="navi">
+      <span>
+        <Link to="/">Home</Link>
+      </span>
+      <br />
       {/*link는 Router 안에서 작동된다.*/}
-      <Link to="/about">About</Link>
+      <span>
+        <Link
+          to={{
+            pathname: "/about",
+            state: {
+              fromNavigation: true,
+            },
+          }}
+        >
+          About
+        </Link>
+      </span>
     </div>
   );
 }
