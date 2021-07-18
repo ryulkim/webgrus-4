@@ -6,11 +6,15 @@ import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <HashRouter>
-      <Navigation />
-      <Route path="/" exact={true} component={Home} />
-      <Route path="/about" component={About} />
-    </HashRouter>
+    <>
+      <HashRouter>
+        <Navigation />
+        {/*link는 Router 안에서 작동된다.*/}
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/about" component={About} />
+      </HashRouter>
+      <footer></footer>
+    </>
   );
 }
 
