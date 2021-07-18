@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/webgrus-4/static/css/main.b33a7e48.chunk.css",
+    "main.css": "/webgrus-4/static/css/main.8a53a947.chunk.css",
     "main.js": "/webgrus-4/static/js/main.361f60f6.chunk.js",
     "main.js.map": "/webgrus-4/static/js/main.361f60f6.chunk.js.map",
     "runtime-main.js": "/webgrus-4/static/js/runtime-main.a2a0294c.js",
@@ -8,13 +8,13 @@
     "static/js/2.9657d3ef.chunk.js": "/webgrus-4/static/js/2.9657d3ef.chunk.js",
     "static/js/2.9657d3ef.chunk.js.map": "/webgrus-4/static/js/2.9657d3ef.chunk.js.map",
     "index.html": "/webgrus-4/index.html",
-    "static/css/main.b33a7e48.chunk.css.map": "/webgrus-4/static/css/main.b33a7e48.chunk.css.map",
+    "static/css/main.8a53a947.chunk.css.map": "/webgrus-4/static/css/main.8a53a947.chunk.css.map",
     "static/js/2.9657d3ef.chunk.js.LICENSE.txt": "/webgrus-4/static/js/2.9657d3ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a2a0294c.js",
     "static/js/2.9657d3ef.chunk.js",
-    "static/css/main.b33a7e48.chunk.css",
+    "static/css/main.8a53a947.chunk.css",
     "static/js/main.361f60f6.chunk.js"
   ]
 }
