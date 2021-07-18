@@ -11,16 +11,7 @@ function Navigation() {
       <br />
       {/*link는 Router 안에서 작동된다.*/}
       <span>
-        <Link
-          to={{
-            pathname: "/about",
-            state: {
-              fromNavigation: true,
-            },
-          }}
-        >
-          About
-        </Link>
+        <Link to="/about">About</Link>
       </span>
     </div>
   );
