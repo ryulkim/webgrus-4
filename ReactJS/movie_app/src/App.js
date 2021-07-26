@@ -13,7 +13,7 @@ function App() {
         {/*link는 Router 안에서 작동된다.*/}
         <Route path="/" exact={true} component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/movie-detail" component={Detail} />
+        <Route path="/movie/:id" component={Detail} />
       </HashRouter>
       <footer></footer>
     </>
