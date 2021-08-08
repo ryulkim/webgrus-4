@@ -1,11 +1,15 @@
 import React from "react";
-import { render } from "react-dom";
 import "./App.css";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { list: JSON.parse(localStorage.getItem("list")) };
+    this.state = {
+      list:
+        JSON.parse(localStorage.getItem("list")) != null
+          ? JSON.parse(localStorage.getItem("list"))
+          : [],
+    };
   }
 
   handleSubmit = (e) => {
@@ -15,9 +19,8 @@ class App extends React.Component {
     const newItem = {
       id: id,
       value: e.target.firstElementChild.value,
+      oncheck: false,
     };
-
-    console.log(newItem);
     const li = this.state.list.concat(newItem);
     this.setState({ list: li });
     e.target.firstElementChild.value = "";
@@ -36,6 +39,13 @@ class App extends React.Component {
     localStorage.setItem("list", JSON.stringify(list));
   };
 
+  checkLi = (e) => {
+    console.log(e);
+    e.target.parentElement.className == ""
+      ? (e.target.parentElement.className = "check")
+      : (e.target.parentElement.className = "");
+  };
+
   render() {
     return (
       <div>
@@ -51,6 +61,9 @@ class App extends React.Component {
               {item.value}
               <button id={item.id} onClick={this.removeLi}>
                 ⚔
+              </button>
+              <button id={item.id} onClick={this.checkLi}>
+                ✅
               </button>
             </li>
           );
