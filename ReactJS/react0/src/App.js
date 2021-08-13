@@ -19,6 +19,7 @@ class App extends React.Component {
     const newItem = {
       id: id,
       value: e.target.firstElementChild.value,
+      toggle: false,
     };
     const li = this.state.list.concat(newItem);
     this.setState({ list: li });
@@ -44,6 +45,31 @@ class App extends React.Component {
       : (e.target.parentElement.className = "");
   };
 
+  updateToggle = (e) => {
+    const btnId = e.target.id;
+    let li = this.state.list;
+    for (let i in li) {
+      if (li[i].id == btnId) {
+        li[i].toggle = true;
+      }
+    }
+    this.setState({ list: li });
+    this.storeLocal(li);
+  };
+
+  updateLi = (e) => {
+    const btnId = e.target.id;
+    let li = this.state.list;
+    for (let i in li) {
+      if (li[i].id == btnId) {
+        li[i].toggle = false;
+        li[i].value = e.target.parentElement.firstChild.value;
+      }
+    }
+    this.setState({ list: li });
+    this.storeLocal(li);
+  };
+
   render() {
     return (
       <div>
@@ -55,16 +81,29 @@ class App extends React.Component {
         <br />
         {this.state.list.map((item) => {
           return (
-            <li key={item.id}>
-              {item.value}
-              <button id={item.id} onClick={this.removeLi}>
-                ⚔
-              </button>
-              <button id={item.id} onClick={this.checkLi}>
-                ✅
-              </button>
-              <button id={item.id}>수정</button>
-            </li>
+            <div>
+              {item.toggle ? (
+                <li>
+                  <input type="text" defaultValue={item.value}></input>
+                  <button id={item.id} onClick={this.updateLi}>
+                    적용
+                  </button>
+                </li>
+              ) : (
+                <li key={item.id}>
+                  {item.value}
+                  <button id={item.id} onClick={this.removeLi}>
+                    ⚔
+                  </button>
+                  <button id={item.id} onClick={this.checkLi}>
+                    ✅
+                  </button>
+                  <button id={item.id} onClick={this.updateToggle}>
+                    수정
+                  </button>
+                </li>
+              )}
+            </div>
           );
         })}
       </div>
