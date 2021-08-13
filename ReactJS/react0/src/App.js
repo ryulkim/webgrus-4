@@ -30,7 +30,7 @@ class App extends React.Component {
   removeLi = (e) => {
     const btnId = e.target.id;
     let li = this.state.list;
-    li = li.filter((li) => li.id != btnId);
+    li = li.filter((li) => li.id !== Number(btnId));
     this.setState({ list: li });
     this.storeLocal(li);
   };
@@ -40,7 +40,7 @@ class App extends React.Component {
   };
 
   checkLi = (e) => {
-    e.target.parentElement.className == ""
+    e.target.parentElement.className === ""
       ? (e.target.parentElement.className = "check")
       : (e.target.parentElement.className = "");
   };
@@ -49,7 +49,7 @@ class App extends React.Component {
     const btnId = e.target.id;
     let li = this.state.list;
     for (let i in li) {
-      if (li[i].id == btnId) {
+      if (li[i].id === Number(btnId)) {
         li[i].toggle = true;
       }
     }
@@ -61,7 +61,7 @@ class App extends React.Component {
     const btnId = e.target.id;
     let li = this.state.list;
     for (let i in li) {
-      if (li[i].id == btnId) {
+      if (li[i].id === Number(btnId)) {
         li[i].toggle = false;
         li[i].value = e.target.parentElement.firstChild.value;
       }
