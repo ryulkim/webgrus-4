@@ -19,7 +19,6 @@ class App extends React.Component {
     const newItem = {
       id: id,
       value: e.target.firstElementChild.value,
-      oncheck: false,
     };
     const li = this.state.list.concat(newItem);
     this.setState({ list: li });
@@ -40,7 +39,6 @@ class App extends React.Component {
   };
 
   checkLi = (e) => {
-    console.log(e);
     e.target.parentElement.className == ""
       ? (e.target.parentElement.className = "check")
       : (e.target.parentElement.className = "");
@@ -65,6 +63,7 @@ class App extends React.Component {
               <button id={item.id} onClick={this.checkLi}>
                 ✅
               </button>
+              <button id={item.id}>수정</button>
             </li>
           );
         })}
