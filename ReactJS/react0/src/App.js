@@ -13,13 +13,17 @@ class App extends React.Component {
   }
 
   handleSubmit = (e) => {
+    console.log(e);
     e.preventDefault();
     let id = Math.random() * 5;
 
     const newItem = {
       id: id,
       value: e.target.firstElementChild.value,
+      date:
+        e.target.children[1].value === "" ? "없음" : e.target.children[1].value,
       toggle: false,
+      checked: false,
     };
     const li = this.state.list.concat(newItem);
     this.setState({ list: li });
@@ -40,9 +44,20 @@ class App extends React.Component {
   };
 
   checkLi = (e) => {
-    e.target.parentElement.className === ""
-      ? (e.target.parentElement.className = "check")
-      : (e.target.parentElement.className = "");
+    console.log(e);
+    const btnId = e.target.id;
+    let li = this.state.list;
+    for (let i in li) {
+      if (li[i].id === Number(btnId)) {
+        if (li[i].checked === false) {
+          li[i].checked = true;
+        } else {
+          li[i].checked = false;
+        }
+      }
+    }
+    this.setState({ list: li });
+    this.storeLocal(li);
   };
 
   updateToggle = (e) => {
@@ -58,12 +73,14 @@ class App extends React.Component {
   };
 
   updateLi = (e) => {
+    console.log(e);
     const btnId = e.target.id;
     let li = this.state.list;
     for (let i in li) {
       if (li[i].id === Number(btnId)) {
         li[i].toggle = false;
         li[i].value = e.target.parentElement.firstChild.value;
+        li[i].date = e.target.parentElement.children[1].value;
       }
     }
     this.setState({ list: li });
@@ -76,6 +93,7 @@ class App extends React.Component {
         <h1>Hello!</h1>
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder="put to-do thing" />
+          <input type="date" />
           <button type="submit">등록</button>
         </form>
         <br />
@@ -85,13 +103,14 @@ class App extends React.Component {
               {item.toggle ? (
                 <li>
                   <input type="text" defaultValue={item.value}></input>
+                  <input type="date" defaultValue={item.date}></input>
                   <button id={item.id} onClick={this.updateLi}>
                     적용
                   </button>
                 </li>
               ) : (
-                <li key={item.id}>
-                  {item.value}
+                <li key={item.id} className={item.checked ? "check" : ""}>
+                  {item.value},&nbsp; 마감 기한: {item.date}
                   <button id={item.id} onClick={this.removeLi}>
                     ⚔
                   </button>
