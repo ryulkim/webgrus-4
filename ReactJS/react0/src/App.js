@@ -90,41 +90,51 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello!</h1>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="put to-do thing" />
-          <input type="date" />
-          <button type="submit">등록</button>
-        </form>
+        <h1>Hello!!! Please write your to-do things!!</h1>
         <br />
-        {this.state.list.map((item) => {
-          return (
-            <div>
-              {item.toggle ? (
-                <li>
-                  <input type="text" defaultValue={item.value}></input>
-                  <input type="date" defaultValue={item.date}></input>
-                  <button id={item.id} onClick={this.updateLi}>
-                    적용
-                  </button>
-                </li>
-              ) : (
-                <li key={item.id} className={item.checked ? "check" : ""}>
-                  {item.value},&nbsp; 마감 기한: {item.date}
-                  <button id={item.id} onClick={this.removeLi}>
-                    ⚔
-                  </button>
-                  <button id={item.id} onClick={this.checkLi}>
-                    ✅
-                  </button>
-                  <button id={item.id} onClick={this.updateToggle}>
-                    수정
-                  </button>
-                </li>
-              )}
-            </div>
-          );
-        })}
+        <br />
+        <br />
+        <br />
+        <div className="list">
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              className="input"
+              placeholder="put to-do thing"
+            />
+            <input type="date" />
+            <button type="submit">등록</button>
+          </form>
+          <br />
+          {this.state.list.map((item) => {
+            return (
+              <div>
+                {item.toggle ? (
+                  <li>
+                    <input type="text" defaultValue={item.value}></input>
+                    <input type="date" defaultValue={item.date}></input>
+                    <button id={item.id} onClick={this.updateLi}>
+                      적용
+                    </button>
+                  </li>
+                ) : (
+                  <li key={item.id} className={item.checked ? "check" : ""}>
+                    {item.value},&nbsp; 마감 기한: {item.date}
+                    <button id={item.id} onClick={this.removeLi}>
+                      ⚔
+                    </button>
+                    <button id={item.id} onClick={this.checkLi}>
+                      ✅
+                    </button>
+                    <button id={item.id} onClick={this.updateToggle}>
+                      수정
+                    </button>
+                  </li>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
