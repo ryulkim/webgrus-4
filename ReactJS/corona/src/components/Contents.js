@@ -102,6 +102,8 @@ const Contents = () => {
               { legend: { display: true, position: "bootom" } })
             }
           />
+        </div>
+        <div>
           <Line
             data={quarantinedData}
             options={
@@ -115,6 +117,8 @@ const Contents = () => {
               { legend: { display: true, position: "bootom" } })
             }
           />
+        </div>
+        <div>
           <Doughnut
             data={comparedData}
             options={
